@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='UTF-8'>
+    <title>Modificando HTML #02</title>
+    <link rel='stylesheet' href='css/estilo.css'>
+</head>
+
+<body class='conteudo exercicio'>
+    <div>
+        <p>Texto Inicial</p>
+    </div>
+    <!-- <div>
+        <p>Texto Inicial</p>
+    </div>
+    <div>
+        <p>Texto Inicial</p>
+    </div>
+    <div>
+        <p>Texto Inicial</p>
+    </div>
+    <div>
+        <p>Texto Inicial</p>
+    </div> -->
+    <script>
+        /* const divs = document.querySelectorAll('div'); // Só da para usar o forEach
+        const arrayDivs = Array.from(divs);// Dá para usar tudo agora
+        console.log(arrayDivs);
+        console.log(divs); */
+
+        const div = document.querySelector('div');
+        div.innerHTML = 'Texto Alterado';
+        // div.outerHTML = 'Texto modificado';
+        div.insertAdjacentHTML('beforebegin', '<p>Antes do inicio</p>');
+        div.insertAdjacentHTML('afterbegin', '<p>Depois do inicio</p>');
+        div.insertAdjacentHTML('beforeend', '<p>Antes do Fim</p>');
+        div.insertAdjacentHTML('afterend', '<p>Depois do Fim</p>');
+
+        // Somente texto sem tag
+        console.log(div.innerText);
+    </script>
+</body>
+
+</html>
+
+<!-- Aula 284 -->
